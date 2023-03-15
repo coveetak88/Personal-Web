@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+*{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+body{
+    background-color: white;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: white;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.nav-logo{
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 5px; /*buat jarak huruf*/
+    padding: 0 20px; /*0 buat line spacing, 20px buat jarak antara logo dan nav*/
+    line-height: 100px; /*buat tambahan line spacing biar backgroundnya makin gede*/
+}
+
+.nav-link{
+    display: flex;
+    justify-content: space-around; /*ngebagi sama jarak dari ujung ke tengah, sm tengah ujung*/
+    width: 40%; /*buat lebar antar nav-link, full screen*/
+}
+
+.nav-link li{
+    list-style: none;
+}
+
+.nav-link a{
+    color: black;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.burger{
+    display: none;
+    cursor: pointer;
+}
+
+.burger div{
+    width: 25px;
+    height: 2px;
+    background-color: black;
+    margin: 5px;
+}
+
+.home{
+    background-image: url("edit psd vers 2.jpg");
+    background-size: cover;
+}
+
+.homecontainer{
+    text-align: center;
+    width: 50%;
+    display: flex;
+    position: static;
+    color: black;
+    padding: 100px;
+}
+
+.home-content{
+    text-align: left;
+    margin: 270px auto 150px;
+}
+
+.home-title{
+    display: inline-block;
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+    font-size: 50px;
+}
+
+.subtext{
+    display: block;
+    text-align: left;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    color: white;
+    margin: 20px 0;
+}
+
+.home-subtitle{
+    text-align: justify;
+    font-size: 15px;
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 200;
+    line-height: 1.5;
+}
+
+.aboutmecontainer{
+    text-align: center;
+    padding: 200px;
+    font-family: 'Roboto Mono', monospace;
+    
+}
+
+.aboutmetitle {
+    font-size: 60px;
+    margin-bottom: 50px;
+}
+
+.aboutmetext{
+    text-align: center;
+    width: 75%;
+    padding-top: 10px;
+    margin: auto;
+    font-size: 20px;
+}
+
+#lifestory {
+    background-color: black;
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.lifestorycontainer{
+    padding: 100px;
+    text-align: center;
+}
+
+.lifestorytitle{
+    font-size: 60px;
+    margin-bottom: 50px;
+}
+
+.lifestorydesc{
+    text-align: center;
+    width: 75%;
+    margin: auto;
+}
+
+.education{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+
+.line1{
+    margin-bottom: 20px;
+}
+
+.line2{
+    margin-top: 20px;
+}
+
+.line3{
+    margin-top: 20px;
+}
+
+.line4{
+    margin-top: 20px;
+}
+
+.row{
+    margin-top: 10px;
+    column-count: 4;
+    column-rule-style: solid;
+    column-rule-width: 2px;
+}
+
+.linksekolah{
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 5px 10px;
+}
+
+.namasekolah{
+    margin-top: 20px;
+}
+
+.link{
+    color: black;
+}
+
+.link:hover{
+    color: grey;
+}
+
+#contact {
+    background-color: rgb(52, 52, 52);
+}
+
+.contactcontainer {
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    color: white;
+    padding: 100px;
+    background-image: url("contact_back_vers.jpg");
+    background-size: cover;
+    
+}
+
+.contacttitle {
+    font-size: 40px;
+    margin-bottom: 20px;
+    
+}
+
+.iconsosmed {
+    margin: 10px 5px;
+    color: white;
+}
+
+.iconsosmed:hover {
+    color: grey;
+}
+
+@media  screen and (max-width: 1024px){
+    .nav-link{
+       width: 50%; /*buat lebar nav-link */
+    }
+}
+
+@media  screen and (max-width: 768px){
+    body{
+        overflow-x: hidden; /*buat ga ada scroll di bagian bawah*/
+    }
+    .nav-link{
+        position: absolute; 
+        right: 0px;
+        height: 90vh;
+        top: 0vh; /*buat jarak nav-link ke atas, disamain sama height navnya*/
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%; /*buat lebar daerah kotakan nav-link */
+        transform: translateX(100%); /*buat ngeslide*/
+        transition: transform 0.5s ease-in; 
+    }
+    .nav-link li{
+        opacity: 0; /*buat ga ada tulisan di nav-link*/
+    }
+    .burger{
+        display: block; /*buat nampilin burger*/
+    }
+}
+
+.nav-active{
+    transform: translateX(0%); /*intinya biar waktu burgernya dipencet, nav-linknya bakal berubah ke 0%*/
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.toggle.line1{
+transform: rotate(-45deg_ translate(-5px,6px));
+}
+.toggle.line2{
+    opacity: 0;
+}
+.toggle.line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+    
+
+
